@@ -54,13 +54,13 @@ fi
 
 mkdir -p .patches
 
-# Commit log of aur-mirror subfolder
-if [[ ! -f ".patches/${package}.log" ]]; then
-    msg "Downloading commit log..."
-    wget -O .patches/${package}.log "http://pkgbuild.com/git/aur-mirror.git/log/${package}"
-fi
-# These are the commit hashes.
-sed -nr 's@.*aur-mirror\.git/commit/'${package}'\?id=([a-z0-9]+).*@\1@p' .patches/${package}.log | tac > .patches/${package}.commits
+# # Commit log of aur-mirror subfolder
+# if [[ ! -f ".patches/${package}.log" ]]; then
+#     msg "Downloading commit log..."
+#     wget -O .patches/${package}.log "http://pkgbuild.com/git/aur-mirror.git/log/${package}"
+# fi
+# # These are the commit hashes.
+# sed -nr 's@.*aur-mirror\.git/commit/'${package}'\?id=([a-z0-9]+).*@\1@p' .patches/${package}.log | tac > .patches/${package}.commits
 
 # Download each commit in turn, with predictable names.
 number=0
