@@ -1,0 +1,10 @@
+https://github.com/eli-schwartz/pkgbuilds
+
+Workflow:
+
+1. (Pull new repo: aurpublish -p <package>)
+2. Build package: `makepkg`
+3. `updpkgsums`
+4. bash pre-commit.hook
+5. Stage PKGBUILD and .SRCINFO and add commit message
+6. bash aurpublish <package name>
