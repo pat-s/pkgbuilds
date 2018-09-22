@@ -1,14 +1,17 @@
 # PKGBUILDs for [Arch User Repository](https://aur.archlinux.org)
-Includes control scripts for managing AUR packages.
+
+Includes control scripts for managing AUR packages (adapted from https://github.com/eli-schwartz/aurpublish).
 
 In order to reuse this, checkout the "base" branch and add your own packages on top. Don't keep mine. ;)
 An additional branch, "submodules-base", contains a previous attempt of mine. I decided I don't want to use submodules, but if you'd rather use that, feel free to take a look. :)
 
 ## How it works
+
 Commit PKGBUILDs in named subdirectories. Export them to the AUR with the included `aurpublish` script, using the subtree push stratagem.
 This preserves an independent history for third-party hosting, pull requests... ;)
 
 ## Commands
+
 * `./setup.sh ssh`
 > Append ssh-config rules for accessing the AUR.
 
@@ -28,6 +31,7 @@ This preserves an independent history for third-party hosting, pull requests... 
 > Experimental. Download the history of a non-migrated AUR3 package, and commit it to a new subtree.
 
 ## Hooks
+
 * pre-commit
 > Warn about whitespace errors, fail if checksums don't match, and auto-generate .SRCINFO for all changed PKGBUILDs.
 
