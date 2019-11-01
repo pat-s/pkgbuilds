@@ -1,0 +1,49 @@
+pkgbase = rstudio-desktop-git
+	pkgdesc = A powerful and productive integrated development environment (IDE) for R programming language
+	pkgver = 1.2.5001.r1361
+	pkgrel = 1
+	url = https://www.rstudio.com/products/rstudio/
+	arch = i686
+	arch = x86_64
+	license = AGPL3
+	makedepends = git
+	makedepends = cmake>=3.1.0
+	makedepends = boost
+	makedepends = desktop-file-utils
+	makedepends = jdk8-openjdk
+	makedepends = apache-ant
+	makedepends = unzip
+	makedepends = openssl
+	makedepends = libcups
+	makedepends = pam
+	makedepends = patchelf
+	makedepends = wget
+	depends = boost-libs
+	depends = r>=2.11.1
+	depends = hunspell-en_US
+	depends = mathjax
+	depends = pandoc
+	depends = clang
+	depends = qt5-sensors
+	depends = qt5-svg
+	depends = qt5-webengine
+	depends = qt5-xmlpatterns
+	optdepends = git: for git support
+	optdepends = subversion: for subversion support
+	optdepends = openssh-askpass: for a git ssh access
+	provides = rstudio-desktop
+	provides = rstudio-desktop-bin
+	provides = rstudio-desktop-preview
+	conflicts = rstudio-desktop
+	conflicts = rstudio-desktop-bin
+	conflicts = rstudio-desktop-preview
+	noextract = gin-2.1.2.zip
+	source = git+https://github.com/rstudio/rstudio.git
+	source = https://s3.amazonaws.com/rstudio-buildtools/gin-2.1.2.zip
+	source = https://s3.amazonaws.com/rstudio-buildtools/gwt-2.8.2.zip
+	sha256sums = SKIP
+	sha256sums = b98e704164f54be596779696a3fcd11be5785c9907a99ec535ff6e9525ad5f9a
+	sha256sums = 970701dacc55170088f5eb327137cb4a7581ebb4734188dfcc2fad9941745d1b
+
+pkgname = rstudio-desktop-git
+
